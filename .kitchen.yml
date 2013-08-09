@@ -1,0 +1,14 @@
+---
+driver_plugin: docker
+
+platforms:
+- name: ubuntu
+  driver_config:
+    image: chef:11.04
+    platform: ubuntu
+
+suites:
+- name: dante
+  run_list:
+    - recipe[minitest-handler]
+    - recipe[dante::server]

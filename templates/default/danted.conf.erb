@@ -1,0 +1,46 @@
+logoutput: <%= @log_file %>
+
+internal: <%= @ipaddress %> port = <%= @port %>
+
+external: <%= @ipaddress %>
+external: <%= @interface %>
+
+method: <%= @method %>
+clientmethod: <%= @clientmethod %>
+
+user.privileged: <%= @user_privileged %>
+
+user.notprivileged: <%= @user_notprivileged %>
+
+user.libwrap: <%= @user_libwrap %>
+
+<% if @compatibility %>
+compatibility: <%= @compatibility %>
+<% end %>
+
+<% @extensions.each do |extension| %>
+extension: <%= extension %>
+<% end %>
+
+
+connecttimeout: <%= @connect_timeout %>   # on a lan, this should be enough if method is "none".
+
+iotimeout: <%= @io_timeout %> # or perhaps 86400, for a day.
+
+<% if ! @srchost_rules.empty? %>
+srchost: <%= @srchost_rules %>
+<% end %>
+
+<% @client_rules.each do |rule| %>
+client <%= rule['type'] %> {
+  from: <%= rule['from'] %> to: <%= rule['to'] %>
+  <% if rule.has_key? 'log' -%>log: <%= rule['log'] %><% end %>
+}
+<% end %>
+
+<% @general_rules.each do |rule| %>
+<%= rule['type'] %> {
+  from: <%= rule['from'] %> to: <%= rule['to'] %>
+  <% if rule.has_key? 'log' -%>log: <%= rule['log'] %><% end %>
+}
+<% end %>
