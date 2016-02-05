@@ -1,0 +1,48 @@
+{
+  "name": "dante",
+  "description": "Installs/Configures the dante socks5 proxy service",
+  "long_description": "Dante Cookbook\n==============\nA cookbook for installing the dante socks proxy. At the moment it only\nsupports configuring the server. The cookbook exposes a dante_server\nLWRP which can be used to deploy the server as well as a recipe to just\ninstall the default server.\n\nThe cookbook has only been tested on Ubuntu 12.04, but should work on\nany recent Ubuntu (and probably debian) which has universe enabled.\n\nRequirements\n------------\nNone, at the moment\n\nAttributes\n----------\n<table>\n  <tr>\n    <th>Key</th>\n    <th>Type</th>\n    <th>Description</th>\n    <th>Default</th>\n  </tr>\n  <tr>\n    <td><tt>['dante']['server']['log_dir']</tt></td>\n    <td>String</td>\n    <td>Directory in which to write logs</td>\n    <td><tt>/var/log/danted</tt></td>\n  </tr>\n</table>\n\nUsage\n-----\n```\n\nContributing\n------------\ne.g.\n1. Fork the repository on Github\n2. Create a named feature branch (like `add_component_x`)\n3. Write you change\n4. Write tests for your change (if applicable)\n5. Run the tests, ensuring they all pass\n6. Submit a Pull Request using Github\n\nLicense and Authors\n-------------------\nAuthors: Tom Howe <turtlebender@gmail.com>\n",
+  "maintainer": "Narrative Science",
+  "maintainer_email": "thowe@narrativescience.com",
+  "license": "All rights reserved",
+  "platforms": {
+
+  },
+  "dependencies": {
+
+  },
+  "recommendations": {
+
+  },
+  "suggestions": {
+
+  },
+  "conflicting": {
+
+  },
+  "providing": {
+
+  },
+  "replacing": {
+
+  },
+  "attributes": {
+
+  },
+  "groupings": {
+
+  },
+  "recipes": {
+
+  },
+  "version": "0.1.1",
+  "source_url": "",
+  "issues_url": "",
+  "privacy": false,
+  "chef_versions": [
+
+  ],
+  "ohai_versions": [
+
+  ]
+}
